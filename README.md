@@ -6,17 +6,12 @@ This metatranscriptomics pipeline processes RNA-seq data, specifically bacterial
 
 Key Features:
 
-Quality Control: Uses Trimmomatic to trim and filter raw RNA-seq reads.
-
-Contamination Check: Runs Kraken2 to detect microbial contaminant abundance.
-
-Genome Alignment: Maps reads to a reference genome using STAR.I am mapping reads to E. coli genome as we used its pure culture for infecting nematode.
-
-Transcriptome Assembly: Performs de novo transcript assembly with Trinity.
-
-Quality Assessment: Assesses transcriptome assembly quality using BUSCO.
-
-Flexibility: Supports containerized tools via Singularity for reproducibility.
+- Quality Control: Uses Trimmomatic to trim and filter raw RNA-seq reads.\
+- Contamination Check: Runs Kraken2 to detect microbial contaminant abundance.\
+- Genome Alignment: Maps reads to a reference genome using STAR.I am mapping reads to E. coli genome as we used its pure culture for infecting nematode.\
+- Transcriptome Assembly: Performs de novo transcript assembly with Trinity.\
+- Quality Assessment: Assesses transcriptome assembly quality using BUSCO.\
+- Flexibility: Supports containerized tools via Singularity for reproducibility.\
 
 Installation:
 
