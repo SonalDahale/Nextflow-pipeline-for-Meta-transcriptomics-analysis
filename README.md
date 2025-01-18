@@ -11,7 +11,7 @@ Key Features:
 - Genome Alignment: Maps reads to a reference genome using STAR.I am mapping reads to E. coli genome as we used its pure culture for infecting nematode.\
 - Transcriptome Assembly: Performs de novo transcript assembly with Trinity.\
 - Quality Assessment: Assesses transcriptome assembly quality using BUSCO.\
-- Flexibility: Supports containerized tools via Singularity for reproducibility.\
+- Flexibility: Supports containerized tools via Singularity for reproducibility.
 
 Installation:
 
@@ -19,16 +19,16 @@ Install Nextflow: Follow the Nextflow Installation Guide.
 
 The pipeline uses the following tools. Ensure they are installed and accessible in your environment:
 
-Trimmomatic\
-STAR\
+Trimmomatic  
+STAR
 
 Singularity Containers:
 
 The following tools are used via Singularity containers to ensure reproducibility, portability, simplified dependencies, and efficient use of storage:
 
-Trinity\
-Kraken2\
-BUSCO\
+Trinity  
+Kraken2  
+BUSCO  
 
 Usage:
 
