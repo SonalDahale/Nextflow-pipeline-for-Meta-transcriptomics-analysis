@@ -19,16 +19,16 @@ Install Nextflow: Follow the Nextflow Installation Guide.
 
 The pipeline uses the following tools. Ensure they are installed and accessible in your environment:
 
-Trimmomatic
-STAR
+Trimmomatic\
+STAR\
 
 Singularity Containers:
 
 The following tools are used via Singularity containers to ensure reproducibility, portability, simplified dependencies, and efficient use of storage:
 
-Trinity
-Kraken2
-BUSCO
+Trinity\
+Kraken2\
+BUSCO\
 
 Usage:
 
@@ -48,22 +48,22 @@ Parameters:
 
 Update the following parameters in nextflow.config as needed:
 
-params.reads: Path to raw RNA-seq reads (supports paired-end reads).
-params.outdir: Directory for pipeline outputs.
-params.genome_dir: Path to the reference genome index directory.
-params.container: Path to the Singularity container for Trinity.
-params.busco_container: Path to the Singularity container for BUSCO.
-params.busco_db: Path to the BUSCO database for quality assessment.
-params.kraken2_container: Path to the Singularity container for Kraken2.
-params.kraken2_db: Path to the Kraken2 database.
+- params.reads: Path to raw RNA-seq reads (supports paired-end reads).\
+- params.outdir: Directory for pipeline outputs.\
+- params.genome_dir: Path to the reference genome index directory.\
+- params.container: Path to the Singularity container for Trinity.\
+- params.busco_container: Path to the Singularity container for BUSCO.\
+- params.busco_db: Path to the BUSCO database for quality assessment.\
+- params.kraken2_container: Path to the Singularity container for Kraken2.\
+- params.kraken2_db: Path to the Kraken2 database.
 
 Outputs:
 
-Trimmed Reads: Quality-controlled FASTQ files.
-Contamination Report: Kraken2 contamination summary highlighting lab-origin contaminants.
-Mapped and Unmapped Reads: BAM files and unmapped FASTQ reads*.
-Transcriptome Assembly: Assembled transcripts in FASTA format.
-Quality Metrics: BUSCO results and Bowtie2 alignment statistics.
+- Trimmed Reads: Quality-controlled FASTQ files.\
+- Contamination Report: Kraken2 contamination summary highlighting lab-origin contaminants.\
+- Mapped and Unmapped Reads: BAM files and unmapped FASTQ reads*.\
+- Transcriptome Assembly: Assembled transcripts in FASTA format.\
+- Quality Metrics: BUSCO results and Bowtie2 alignment statistics.\
 
 Continuous Updates:
 
