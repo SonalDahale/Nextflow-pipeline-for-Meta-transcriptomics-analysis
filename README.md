@@ -32,7 +32,8 @@ Modify the nextflow.config file to specify your input data paths and parameters.
 
 Run the pipeline with the following command:
 nextflow run main.nf
-
+or on your cluster using:
+qsub Nextflow_job_submission.sh
 Output files will be saved in the directory specified by params.outdir.
 
 Parameters:
