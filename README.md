@@ -18,30 +18,26 @@ Installation:
 Install Nextflow: Follow the Nextflow Installation Guide.  
 The pipeline uses the following tools. Ensure they are installed and accessible in your environment:
 
-  Trimmomatic  
-  STAR
+- Trimmomatic  
+- STAR
 
 Singularity Containers: The following tools are used via Singularity containers to ensure reproducibility, portability, simplified dependencies, and efficient use of storage:
 
-  Trinity  
-  Kraken2  
-  BUSCO  
+- Trinity  
+- Kraken2  
+- BUSCO  
 
 Usage: Modify the nextflow.config file to specify your input data paths and parameters.
 
-Run the pipeline with the following command:
+Run the pipeline with the following command:  
+   nextflow run main.nf
 
-nextflow run main.nf
-
-or on your cluster using:
-
-qsub Nextflow_job_submission.sh
+or on your cluster using:  
+  qsub Nextflow_job_submission.sh
 
 Output files will be saved in the directory specified by params.outdir.
 
-Parameters:
-
-Update the following parameters in nextflow.config as needed:
+Parameters: Update the following parameters in nextflow.config as needed:
 
 - params.reads: Path to raw RNA-seq reads (supports paired-end reads).\
 - params.outdir: Directory for pipeline outputs.\
