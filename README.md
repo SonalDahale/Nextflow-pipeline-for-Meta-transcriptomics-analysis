@@ -14,13 +14,16 @@ Quality Assessment: Assesses transcriptome assembly quality using BUSCO.
 Flexibility: Supports containerized tools via Singularity for reproducibility.
 
 Installation:
+
 Install Nextflow: Follow the Nextflow Installation Guide.
 
 The pipeline uses the following tools. Ensure they are installed and accessible in your environment:
+
 Trimmomatic
 STAR
 
 Singularity Containers:
+
 The following tools are used via Singularity containers to ensure reproducibility, portability, simplified dependencies, and efficient use of storage:
 
 Trinity
@@ -28,12 +31,17 @@ Kraken2
 BUSCO
 
 Usage:
+
 Modify the nextflow.config file to specify your input data paths and parameters.
 
 Run the pipeline with the following command:
+
 nextflow run main.nf
+
 or on your cluster using:
+
 qsub Nextflow_job_submission.sh
+
 Output files will be saved in the directory specified by params.outdir.
 
 Parameters:
@@ -58,7 +66,9 @@ Transcriptome Assembly: Assembled transcripts in FASTA format.
 Quality Metrics: BUSCO results and Bowtie2 alignment statistics.
 
 Continuous Updates:
+
 This pipeline is actively under development, with new features and analyses being continuously added. Stay tuned for updates, including functional annotation, taxonomic profiling, and downstream analysis.
 
 Note on Unmapped FASTQ Reads:
+
 Unmapped FASTQ reads are mRNA reads from the host (nematode in this case). Depending on the availability of a reference genome, these reads will be used for either reference-based or de novo assembly. These reads will also be employed for functional annotation, GSEA, and downstream analysis
