@@ -1,6 +1,7 @@
 https://github.com/SonalDahale/Nextflow-pipeline-for-Meta-transcriptomics-analysis/blob/main/Metatrasncritpomic_nextflow.png
 
 ############# Gut Microbial Metatranscriptomics Pipeline #############
+
 This metatranscriptomics pipeline processes RNA-seq data, specifically bacterial contaminants in organisms like nematodes. The pipeline includes quality control, contamination checks, transcriptome assembly, and quality assessment, and is tailored to identify and filter out known contaminants.
 
 Key Features:
