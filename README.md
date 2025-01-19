@@ -1,4 +1,4 @@
-![Pipeline_workflow](https://github.com/SonalDahale/Nextflow-pipeline-for-Meta-transcriptomics-analysis/blob/main/Metatrasncritpomic_nextflow.png)
+![Pipeline_workflow](https://github.com/SonalDahale/Nextflow-pipeline-for-Meta-transcriptomics-analysis/blob/main/Metatrasncritpomic_nextflow_cele.png)
 
 ############# Gut Microbial Metatranscriptomics Pipeline #############
 
