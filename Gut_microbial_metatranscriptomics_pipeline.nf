@@ -195,7 +195,34 @@ process busco_analysis {
           -l ${params.busco_db}
     """
 }
+process trinity_cele_assembly {
 
+    publishDir "${params.outdir}/trinity_output_cele", mode: 'copy'
+
+    // Use Singularity container
+
+    input:
+    path(unmapped_left)
+    path(unmapped_right)
+
+    output:
+    // The directory for Trinity output
+    path ("trinity_out_dir_cele"), emit: trinity_output
+
+    script:
+    """
+    # Run Trinity assembly using Singularity container
+    singularity exec -e ${params.container} Trinity \
+    --seqType fq \
+    --left ${unmapped_left} \
+    --right ${unmapped_left} \
+    --max_memory 2G --CPU 8 \
+    --no_normalize_reads\
+    --output trinity_out_dir_cele
+
+    mv *Trinity.fasta* trinity_out_dir_cele/
+    """
+}
 // Running a workflow with the defined processes here.  
 workflow {
   trimmomatic(reads_ch)
@@ -205,7 +232,8 @@ workflow {
   trinity_assembly(bam_to_fastq.out.bact_left_read, bam_to_fastq.out.bact_right_read)
   trinity_bowtie2_indexing(trinity_assembly.out.trinity_output)
   trinity_bowtie2_assesment(trinity_bowtie2_indexing.out.trinity_indexing, bam_to_fastq.out.bact_left_read, bam_to_fastq.out.bact_right_read)
-  busco_analysis(trinity_assembly.out.trinity_output) 
+  busco_analysis(trinity_assembly.out.trinity_output)
+  trinity_cele_assembly(star_genome_mapping.out.unmapped_left, star_genome_mapping.out.unmapped_right)
 }
 
 workflow.onComplete {
