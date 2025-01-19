@@ -9,7 +9,7 @@ Key Features:
 - Quality Control: Uses Trimmomatic to trim and filter raw RNA-seq reads.  
 - Contamination Check: Runs Kraken2 to detect microbial contaminant abundance.  
 - Genome Alignment: Maps reads to a reference genome using STAR.I am mapping reads to E. coli genome as we used its pure culture for infecting nematode.  
-- Transcriptome Assembly: Performs de novo transcript assembly with Trinity.  
+- Transcriptome Assembly: Performs de novo transcript assembly with Trinity(for host nematode and its gut dwelling E.coli) 
 - Quality Assessment: Assesses transcriptome assembly quality using BUSCO.  
 - Flexibility: Supports containerized tools via Singularity for reproducibility.  
 
@@ -53,7 +53,8 @@ Outputs:
 - Trimmed Reads: Quality-controlled FASTQ files.\
 - Contamination Report: Kraken2 contamination summary highlighting lab-origin contaminants.\
 - Mapped and Unmapped Reads: BAM files and unmapped FASTQ reads*.\
-- Transcriptome Assembly: Assembled transcripts in FASTA format.\
+- Transcriptome Assembly: Assembled transcripts in FASTA format(Ecoli).\
+- Transcriptome Assembly: Assembled transcripts in FASTA format(C. elegans).\
 - Quality Metrics: BUSCO results and Bowtie2 alignment statistics.\
 
 Continuous Updates:
